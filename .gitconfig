@@ -1,0 +1,37 @@
+[alias]
+a = add .
+c = commit
+cl = clone
+cm = commit -m
+ps = push
+s = status
+p = pull
+po = pull origin
+o = checkout
+ob = checkout -b
+reh = reset --hard
+i = init
+psf = push --force
+ba = branch --all
+psuo = push --set-upstream origin
+bd = branch -D
+rao = remote add origin
+rro = remote remove origin
+ra = remote add
+rr = remote remove
+lft = lfs track
+lff = lfs fetch
+lfo = lfs checkout
+lfst = lfs fsck
+lfi = lfs install
+lfcl = lfs clone
+lfp = lfs pull
+lfps = lfs push
+lfpr = lfs prune
+lfui = lfs uninstall
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
